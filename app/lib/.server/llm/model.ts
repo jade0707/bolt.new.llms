@@ -13,12 +13,20 @@ export function getAnthropicModel(apiKey: string, model: string) {
   return anthropic(model);
 }
 
-export function getOpenAIModel(apiKey: string, model: string) {
-  const openai = createOpenAI({
-    apiKey,
-  });
+// export function getOpenAIModel(apiKey: string, model: string) {
+//   const openai = createOpenAI({
+//     apiKey,
+//   });
 
-  return openai(model);
+//   return openai(model);
+// }
+export function getOpenAIModel(apiKey: string) {
+    const openai = createOpenAI({
+      apiKey: "44babb8db9ecec06b539e378046bb6be.vWGZkMs2vVK9xiKZ",
+      baseURL: 'https://open.bigmodel.cn/api/paas/v4/',
+    });
+  
+    return openai('glm-4-plus');
 }
 
 export function getGroqModel(apiKey: string, model: string) {
