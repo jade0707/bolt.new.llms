@@ -21,7 +21,6 @@ export function getOpenAIModel(apiKey: string, model: string) {
   return openai(model);
 }
 
-
 export function getGroqModel(apiKey: string, model: string) {
   const openai = createOpenAI({
     baseURL: 'https://api.groq.com/openai/v1',
